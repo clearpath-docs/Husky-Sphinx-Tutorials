@@ -1,0 +1,278 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Simulating Husky &mdash; Husky UGV Tutorials 0.5.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/clearpath.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Husky UGV Tutorials 0.5.1 documentation" href="index.html"/>
+        <link rel="next" title="Interfacing with Husky" href="InterfacingWithHusky.html"/>
+        <link rel="prev" title="Customize Husky Configuration" href="CustomizeHuskyConfig.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Start of clearpathrobotics Zendesk Widget script -->
+<script>/*<![CDATA[​*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","clearpathrobotics.zendesk.com");/*​]]>*/</script>
+<!-- End of clearpathrobotics Zendesk Widget script -->
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-65409991-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Husky UGV Tutorials
+          
+
+          
+            
+            <img src="_static/clearpathlogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search..." />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="BackUpHusky.html">Backing Up Husky Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InstallHuskySoftware.html">Install and Configure Husky Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CustomizeHuskyConfig.html">Customize Husky Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Husky</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Simulating Husky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InterfacingWithHusky.html">Interfacing with Husky</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Applications: Navigation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HuskyMove.html">Husky Move Base Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HuskyAMCL.html">Husky AMCL Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HuskyGmapping.html">Husky Gmapping Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HuskyFrontiers.html">Husky Frontier Exploration Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HuskyGPSWaypointNav.html">Husky Outdoor GPS Waypoint Navigation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Demo Applications: Manipulation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HuskyManip.html">Husky UR5 Mobile Manipulation Demo (Simulation)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HuskyDualManip.html">Husky Dual UR5 Mobile Manipulation Demo (Simulation)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Package Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HuskyPackages.html">Husky Packages</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Husky UGV Tutorials</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+     
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://support.clearpathrobotics.com">Home</a> &raquo;</li>
+      
+    <li>Simulating Husky</li>
+      <li class="wy-breadcrumbs-aside">
+        <div class="roslogo">
+      </div>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="simulating-husky">
+<h1>Simulating Husky<a class="headerlink" href="#simulating-husky" title="Permalink to this headline">¶</a></h1>
+<p>Husky can be used in both real and simulated environments. If you are using a physical Husky, please make sure all your peripherals are plugged in, turn on the robot, and skip directly to step 2.</p>
+<p>Husky can be simulated in several environments using the husky_gazebo packages. To start a simulation:</p>
+<ol class="arabic simple">
+<li>Make sure the simulation package is installed:</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ sudo apt-get install ros-indigo-husky-simulator
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Run one of the two provided simulation environments:</li>
+</ol>
+<ol class="lowerroman simple">
+<li>Simulate Husky in an empty world. You can add new objects to this world using the Gazebo controls (Gazebo Tutorial - Building a World.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ roslaunch husky_gazebo husky_empty_world.launch
+</pre></div>
+</div>
+<ol class="lowerroman simple" start="2">
+<li>Simulate Husky in a Clearpath designed world. This is the base environment for the navigation tutorials. It will take some time to start, as the simulator will need to download resources from the Gazebo servers.</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ roslaunch husky_gazebo husky_playpen.launch
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Pick your own world in which to simulate Husky (Using roslaunch with Gazebo).</li>
+</ol>
+<div class="code bash highlight-python"><div class="highlight"><pre>$ roslaunch husky_gazebo husky_empty_world.launch world_name:=worlds/willowgarage.world
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="InterfacingWithHusky.html" class="btn btn-neutral float-right" title="Interfacing with Husky" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CustomizeHuskyConfig.html" class="btn btn-neutral" title="Customize Husky Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Clearpath Robotics.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
