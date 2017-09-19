@@ -195,7 +195,7 @@ and for simulation:
 
 To start waypoint collection, press the start collection button (LB by default). You can then drive around collecting waypoints along your path. Make sure to end the node with the joystick, then launch the waypoint following node (RB button by default).
 
-The following video <http://embed.vidyard.com/share/mS1S2t6kEQZ3YkY4bPAuyc?>`_ illustrates an implementation of this software on one of our own Husky's:
+The following `video <http://embed.vidyard.com/share/mS1S2t6kEQZ3YkY4bPAuyc?>`_ illustrates an implementation of this software on one of our own Husky's:
 
 .. raw:: html
 
@@ -289,6 +289,7 @@ Common Problems
 
           
 .. image:: GPS_data_Sim_Low_Cov.jpg
+
 
 
 .. image:: GPS_data_Novatel_d.jpg
