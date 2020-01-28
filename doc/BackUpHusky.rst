@@ -1,10 +1,10 @@
 Backing Up Husky Configuration
-=================================   
+=================================
 
 
-Upgrading your Clearpath Husky to ROS Indigo from older ROS distributions is a straightforward process, however it's important to understand that each Husky is different, having undergone customization to your specifications by our robotsmiths.
+Upgrading your Clearpath Husky to ROS Kinetic from older ROS distributions is a straightforward process, however it's important to understand that each Husky is different, having undergone customization to your specifications by our robotsmiths.
 
-Please take the time to understand what these modifications are, and how to recreate them on your fresh install of Ubuntu Trusty/ROS Indigo.
+Please take the time to understand what these modifications are, and how to recreate them on your fresh install of Ubuntu Xenial/ROS Kinetic.
 
 Performing a Backup
 -----------------------------
@@ -14,7 +14,7 @@ Performing a Backup
 
 *  The easiest approach may be to either connect a removable (USB or similar) hard drive to the robot PC, or to unplug the robot hard drive and 	insert it into a PC or workstation.
 *  You can then use a tool such as CloneZilla or dd to write a backup image of your robot's hard drive onto another hard drive.
-*  Alternatively, you can simply replace the robot computer's hard-drive, reserving the Hydro-configured drive and installing a new one to use with Indigo.
+*  Alternatively, you can simply replace the robot computer's hard-drive, reserving the Hydro-configured drive and installing a new one to use with Kinetic.
 
 2.  There are several places in the filesystem you should specifically look for customizations for your Husky:
 
@@ -26,4 +26,4 @@ Location:								Description:
 /etc/ros/setup.bash						May contain environment variables for your configuration.
 ====================================	====================================================
 
-3.   Please save all these files and use them as a reference during Indigo configuration!
+3.   Please save all these files and use them as a reference during Kinetic configuration!

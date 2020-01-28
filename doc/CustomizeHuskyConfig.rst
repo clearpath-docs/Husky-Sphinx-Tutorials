@@ -1,5 +1,5 @@
 Customize Husky Configuration
-======================================   
+======================================
 
 .. Note:: These tutorials assume that you are familiar with ROS and the catkin build system. Please familiarize yourself using the `ROS <http://wiki.ros.org/ROS/Tutorials>`_ and `catkin <http://wiki.ros.org/catkin/Tutorials>`_ tutorials.
 
@@ -73,35 +73,35 @@ Husky's standard peripherals can be configured using these environment variables
 Adding a Source Workspace
 ---------------------------
 
-Configuring non-standard peripherals requires a source workspace on the robot PC. 
+Configuring non-standard peripherals requires a source workspace on the robot PC.
 
 1.  Create a new workspace:
 
 .. code:: bash
-	
-	 $ mkdir -p ~/husky_indigo_ws/src
 
-2.  Add any custom source packages to the ~/husky_indigo_ws/src directory.
+	 $ mkdir -p ~/husky_kinetic_ws/src
+
+2.  Add any custom source packages to the ~/husky_kinetic_ws/src directory.
 
 3.  After adding your packages, make sure any necessary dependencies are installed:
 
 .. code:: bash
 
- 	$ cd ~/husky_indigo_ws/
-	$ rosdep install --from-paths src --ignore-src --rosdistro indigo -y
+ 	$ cd ~/husky_kinetic_ws/
+	$ rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
 
 4.  Build the workspace:
 
 .. code:: bash
 
- 	$ cd ~/husky_indigo_ws/
+ 	$ cd ~/husky_kinetic_ws/
 	$ catkin_make
 
-5.  Modify your robot-wide setup file (/etc/ros/setup.bash) to source your new workspace instead of the base indigo 		install:
+5.  Modify your robot-wide setup file (/etc/ros/setup.bash) to source your new workspace instead of the base kinetic 		install:
 
 .. code:: bash
- 	
- 	source /home/administrator/husky_indigo_ws/devel/setup.bash
+
+ 	source /home/administrator/husky_kinetic_ws/devel/setup.bash
 
 6.  Reinitialize your environment so that it picks up your new workspace:
 
@@ -119,15 +119,15 @@ Configuring non-standard peripherals requires a source workspace on the robot PC
 Robot Description
 -----------------------
 
-In ROS Hydro and earlier, custom Husky descriptions (URDFs) were provided to customers in a workspace in their home folder. Since the Husky URDF has undergone some changes for Indigo, your robot description from prior ROS releases will have to be slightly adapted.
+In ROS Hydro and earlier, custom Husky descriptions (URDFs) were provided to customers in a workspace in their home folder. Since the Husky URDF has undergone some changes for Kinetic, your robot description from prior ROS releases will have to be slightly adapted.
 
 To create a custom Husky configuration, fork the `husky_customization <https://github.com/husky/husky_customization.git>`_ repository to your `GitHub account <http://wiki.ros.org/GitHub>`_, and clone the fork into your workspace:
 
 .. code:: bash
 
-	$ cd ~/husky_indigo_ws/src
-	$ git clone https://github.com/<username>/husky_customization.git -b indigo-devel
-	$ cd ~/husky_indigo_ws
+	$ cd ~/husky_kinetic_ws/src
+	$ git clone https://github.com/<username>/husky_customization.git -b kinetic-devel
+	$ cd ~/husky_kinetic_ws
 	$ catkin_make
 	$ source devel/setup.bash
 
@@ -141,6 +141,3 @@ Network Configuration
 -----------------------
 
 If upgrading from prior ROS releases, your old ``/etc/network/interfaces`` file may contain a static IP binding for your robot, or other customizations that should be replicated on your new setup.
-
-
-

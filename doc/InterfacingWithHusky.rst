@@ -1,11 +1,11 @@
 Interfacing with Husky
-=========================  
+=========================
 
 Both simulated and real Husky robots expose the same ROS interface, and can be interacted with in the same way. Please make sure that the desktop packages for Husky are installed:
 
 .. code:: bash
 
-	$ sudo apt-get install ros-indigo-husky-desktop
+	$ sudo apt-get install ros-kinetic-husky-desktop
 
 Visualization
 --------------
@@ -25,7 +25,7 @@ There are three quick ways to send your Husky control commands:
 
 2.  Using the rviz instance above. If you select the Interact option in the top toolbar, an interactive marker will appear around the Husky and can be used to control speed.
 
-3.  The `rqt_robot_steering plugin <http://wiki.ros.org/rqt_robot_steering>`_. Run the rqt command, and select **Plugins->Robot Tools->Robot Steering** from the top menu.  
+3.  The `rqt_robot_steering plugin <http://wiki.ros.org/rqt_robot_steering>`_. Run the rqt command, and select **Plugins->Robot Tools->Robot Steering** from the top menu.
 
 Husky uses `twist_mux <http://wiki.ros.org/twist_mux>`_ to mix four separate `geometry_msgs\/Twist <http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html>`_ control channels into the ``husky_velocity_controller/cmd_vel topic``.
 
@@ -68,7 +68,7 @@ These channels are (in order of decreasing priotity):
 	  </tbody>
 	</table>
 
-Additional velocity channels can be defined in `twist_mux\.yaml <https://github.com/husky/husky_control/blob/indigo-devel/config/twist_mux.yaml>`_, or can be piped into the lowest-priority cmd_vel topic.
+Additional velocity channels can be defined in `twist_mux\.yaml <https://github.com/husky/husky/blob/kinetic-devel/husky_control/config/twist_mux.yaml>`_, or can be piped into the lowest-priority cmd_vel topic.
 
 Odometry
 ---------
@@ -108,7 +108,7 @@ Husky publishes odometry information on the odometry/filtered topic, as `nav_msg
 	</table>
 	</div>
 
-Additional odometry information sources can be added to the EKF in `localization\.yaml <https://github.com/husky/husky_control/blob/indigo-devel/config/twist_mux.yaml>`_.
+Additional odometry information sources can be added to the EKF in `localization\.yaml <https://github.com/husky/husky/blob/kinetic-devel/husky_control/config/twist_mux.yaml>`_.
 
 Diagnostics
 ------------

@@ -1,5 +1,5 @@
 Husky Frontier Exploration Demo
-======================================   
+======================================
 
 This tutorial shows you how to use `move_base <http://wiki.ros.org/move_base>`_ with `gmapping <http://wiki.ros.org/gmapping>`_ and `frontier_exploration <http://wiki.ros.org/frontier_exploration>`_ to perform autonomous planning movement, and exploration with simultaneous localization and mapping (SLAM), on a simulated Husky, or a factory-standard Husky with a laser scanner publishing on the scan topic.
 
@@ -13,7 +13,7 @@ Instructions
 
 .. code:: bash
 
-	$ sudo apt-get install ros-indigo-husky-navigation
+	$ sudo apt-get install ros-kinetic-husky-navigation
 
 2.  In three separate terminal windows:
 

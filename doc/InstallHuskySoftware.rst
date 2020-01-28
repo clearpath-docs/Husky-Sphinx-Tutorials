@@ -1,5 +1,5 @@
 Install and Configure Husky Software
-=======================================  
+=======================================
 
 Installing Husky Software
 ---------------------------
@@ -7,13 +7,13 @@ Installing Husky Software
 Clearpath provides a lightly customized installation image of Ubuntu Trusty Server 14.04, that automatically pulls in all necessary dependencies for Husky software.
 
 
-1.  Download the appropriate `Indigo Husky ISO image <http://packages.clearpathrobotics.com/stable/images/latest/indigo-husky/>`_ for your platform (32 bit - i386, 64 bit - amd64).
+1.  Download the appropriate `Kinetic Husky ISO image <http://packages.clearpathrobotics.com/stable/images/latest/kinetic-husky/>`_ for your platform (32 bit - i386, 64 bit - amd64).
 
 2. Copy the image to a USB drive using unetbootin:
 
-.. code:: bash 
+.. code:: bash
 
-	 $ sudo unetbootin isofile="indigo-husky-amd64-latest.iso"
+	 $ sudo unetbootin isofile="kinetic-husky-amd64-latest.iso"
 
 3.  Connect your robot PC to wired internet access, a keyboard, and a monitor. Make sure that the PC is connected to shore power, or the Husky battery is either fully charged.
 
@@ -43,7 +43,7 @@ Testing base configuration
 	 $ sudo service husky-core start
 
 2.  The COMM light on your Husky should go from red to green. You can check that the service has started correctly by checking the logs:
- 
+
 .. code:: bash
 
 	 $ sudo tail /var/log/upstart/husky-core.log -n 30

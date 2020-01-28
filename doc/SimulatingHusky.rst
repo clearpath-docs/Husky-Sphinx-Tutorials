@@ -1,5 +1,5 @@
 Simulating Husky
-================== 
+==================
 
 Husky can be used in both real and simulated environments. If you are using a physical Husky, please make sure all your peripherals are plugged in, turn on the robot, and skip directly to step 2.
 
@@ -9,7 +9,7 @@ Husky can be simulated in several environments using the husky_gazebo packages. 
 
 .. code:: bash
 
-	$ sudo apt-get install ros-indigo-husky-simulator
+	$ sudo apt-get install ros-kinetic-husky-simulator
 
 2. Run one of the two provided simulation environments:
 
@@ -30,4 +30,3 @@ ii.  Simulate Husky in a Clearpath designed world. This is the base environment 
 .. code:: bash
 
 	$ roslaunch husky_gazebo husky_empty_world.launch world_name:=worlds/willowgarage.world
-
