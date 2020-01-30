@@ -29,4 +29,4 @@ ii.  Simulate Husky in a Clearpath designed world. This is the base environment 
 
 .. code:: bash
 
-	$ roslaunch husky_gazebo husky_empty_world.launch world_name:=worlds/willowgarage.world
+	$ roslaunch husky_gazebo husky_playpen.launch
