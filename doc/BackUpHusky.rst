@@ -22,7 +22,8 @@ Performing a Backup
 Location:								Description:
 ====================================	====================================================
 /etc/network/interfaces					Your robot may have a custom network configuration configured in this file.
-/etc/ros/hydro/husky-core.d/*.launch	Will contain base.launch and description.launch, may contain custom launch files for your robot configuration
+/etc/ros/hydro/husky-core.d/*.launch	Will contain base.launch and description.launch, may contain custom launch files for your robot configuration.  Replaced by ros.d in newer versions.
+/etc/ros/hydro/ros.d/*.launch					Will contain base.launch and description.launch, may contain custom launch files for your robot configuration.  Replaces husky-core.d in newer versions.
 /etc/ros/setup.bash						May contain environment variables for your configuration.
 ====================================	====================================================
 
