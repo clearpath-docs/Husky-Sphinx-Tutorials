@@ -121,21 +121,14 @@ Robot Description
 
 In ROS Hydro and earlier, custom Husky descriptions (URDFs) were provided to customers in a workspace in their home folder. Since the Husky URDF has undergone some changes for Kinetic, your robot description from prior ROS releases will have to be slightly adapted.
 
-To create a custom Husky configuration, fork the `husky_customization <https://github.com/husky/husky_customization.git>`_ repository to your `GitHub account <http://wiki.ros.org/GitHub>`_, and clone the fork into your workspace:
+First create a new URDF file in which you will define your custom Husky additions.  e.g. `/home/administrator/husky-custom.xacro`.  Then modify `/etc/ros/setup.bash` to define the HUSKY_URDF_EXTRAS variable to point to your new file:
 
 .. code:: bash
 
-	$ cd ~/husky_kinetic_ws/src
-	$ git clone https://github.com/<username>/husky_customization.git -b kinetic-devel
-	$ cd ~/husky_kinetic_ws
-	$ catkin_make
-	$ source devel/setup.bash
+	export HUSKY_URDF_EXTRAS=/home/administrator/husky-custom.xacro
 
-To modify your Husky's URDF description (see `ROS URDF Tutorials <http://wiki.ros.org/urdf/Tutorials>`_), edit the ``husky_customization/husky_custom_description/urdf/custom_description.urdf.xacro`` file. Run roslaunch husky_viz view_model.launch to see your custom model in rviz.
+Modify `husky-custom.xacro` to add whatever additional features are required.  When finished, restart ROS by running `sudo systemctl restart ros`.  You can verify that your customized model is being used by running `rviz`.
 
-To modify your Husky's simulation configuration (see `Gazebo's URDF Tutorials <http://gazebosim.org/tutorials/?tut=ros_urdf>`_), edit the ``husky_customization/husky_custom_gazebo/urdf/custom_description.gazebo.xacro`` file. Run ``roslaunch husky_gazebo husky_playpen.launch`` to see your custom Gazebo configuration in action!
-
-Once you are done customizing your Husky configuration, don't forget to commit and push the changes back into your `GitHub <http://wiki.ros.org/GitHub>`_ repository.
 
 Network Configuration
 -----------------------
