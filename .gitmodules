@@ -5,5 +5,5 @@
 	path = clearpath-sphinx-theme
 	url = http://gitlab.clearpathrobotics.com/research/clearpath-sphinx-theme.git
 [submodule "clearpath-latex"]
-	path = clearpath-latex
+	path = latex/clearpath-latex
 	url = https://github.com/clearpathrobotics/clearpath-latex.git
