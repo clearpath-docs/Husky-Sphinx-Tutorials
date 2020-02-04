@@ -26,6 +26,7 @@ For more information or to receive a quote, please `visit us online <http://clea
 
     SimulatingHusky.rst
     InterfacingWithHusky.rst
+    DrivingHusky.rst
 
 .. toctree::
     :maxdepth: 0
