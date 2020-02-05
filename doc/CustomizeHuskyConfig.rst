@@ -109,25 +109,25 @@ Configuring non-standard peripherals requires a source workspace on the robot PC
 
  	$ source /etc/ros/setup.bash
 
-7.  Augment the husky-core job with launch files from your custom packages:
-
-.. code:: bash
-
-	$ rosrun robot_upstart install my_custom_package/launch --job husky-core --augment
-
 
 Robot Description
 -----------------------
 
 In ROS Hydro and earlier, custom Husky descriptions (URDFs) were provided to customers in a workspace in their home folder. Since the Husky URDF has undergone some changes for Kinetic, your robot description from prior ROS releases will have to be slightly adapted.
 
-First create a new URDF file in which you will define your custom Husky additions.  e.g. `/home/administrator/husky-custom.xacro`.  Then modify `/etc/ros/setup.bash` to define the HUSKY_URDF_EXTRAS variable to point to your new file:
+First create a new URDF file in which you will define your custom Husky additions.  e.g. ``/home/administrator/husky-custom.xacro``.  Then modify ``/etc/ros/setup.bash`` to define the HUSKY_URDF_EXTRAS variable to point to your new file:
 
 .. code:: bash
 
-	export HUSKY_URDF_EXTRAS=/home/administrator/husky-custom.xacro
+	export HUSKY_URDF_EXTRAS=/path/to/your/custom-file.xacro
 
-Modify `husky-custom.xacro` to add whatever additional features are required.  When finished, restart ROS by running `sudo systemctl restart ros`.  You can verify that your customized model is being used by running `rviz`.
+So for the previous example, if we saved the customized file to ``/home/administrator/husky-custom.xacro`` we would put ``export HUSKY_URDF_EXTRAS=/home/administrator/husky-custom.xacro`` in the ``setup.bash`` file.
+
+Modify your customized ``*.xacro`` file to add whatever additional features are required.  When finished, restart ROS by running `sudo systemctl restart ros`.  You can verify that your customized model is being used by running
+
+.. code-block:: bash
+
+		$ roslauch husky_viz view_robot.launch
 
 
 Network Configuration
